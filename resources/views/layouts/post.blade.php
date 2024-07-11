@@ -17,4 +17,3 @@
     <!-- JS -->
     @yield('page-js')
 </body>
-
