@@ -20,7 +20,7 @@ class CheckAbandonedPosts extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Checks for posts with missing blade files. Returns 1 if there are any, 0 otherwise.';
 
     /**
      * Execute the console command.
