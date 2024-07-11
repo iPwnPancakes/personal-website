@@ -11,6 +11,8 @@ class PostSlugController extends Controller
      */
     public function __invoke(Post $post)
     {
-        return view($post->blade_file);
+        return view($post->blade_file, [
+            'title' => $post->title,
+        ]);
     }
 }
