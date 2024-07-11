@@ -10,6 +10,12 @@ class Post extends Model
 {
     use HasSlug;
 
+    protected $fillable = ['title', 'blade_file', 'state', 'slug'];
+
+    protected $casts = [
+        'state' => PostStates::class
+    ];
+
     public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
