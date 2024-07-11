@@ -11,6 +11,6 @@ class PostSlugController extends Controller
      */
     public function __invoke(Post $post)
     {
-        dd($post);
+        return view($post->blade_file);
     }
 }

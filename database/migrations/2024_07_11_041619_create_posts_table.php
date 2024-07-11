@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->timestamps();
             $table->softDeletes();
             $table->string('title');
-            $table->string('blade-file');
+            $table->string('blade_file');
             $table->enum('state', ['published', 'draft']);
             $table->string('slug', 255)->index();
         });

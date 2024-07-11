@@ -25,4 +25,14 @@ class Post extends Model
             ->skipGenerateWhen(fn() => $this->state === 'draft')
             ->doNotGenerateSlugsOnUpdate();
     }
+
+    public function isDraft(): bool
+    {
+        return $this->state === PostStates::DRAFT;
+    }
+
+    public function isPublished(): bool
+    {
+        return $this->state === PostStates::PUBLISHED;
+    }
 }
